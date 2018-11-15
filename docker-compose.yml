@@ -1,0 +1,88 @@
+version: '3'
+services:
+
+  # Mongodb
+  mongo:
+    image: mongo:latest
+    ports:
+      - "27018:27017"
+    volumes:
+      - mongo-data-volume:/data/db
+
+  # RabbitMQ
+  rabbit:
+     image: rabbitmq:management
+     hostname: rabbit
+     volumes:
+        - rabbit-volume:/etc/rabbitmq
+     ports:
+        - "4000:5672"
+        - "4001:15672"
+     healthcheck: 
+        test: ["CMD", "curl", "-f", "http://localhost:15672"]
+        interval: 30s
+        timeout: 10s
+        retries: 5
+
+  minio:
+    image: minio/minio
+    volumes:
+      - minio-data:/data/minio
+    ports:
+      - "9000:9000"
+    environment:
+      MINIO_ACCESS_KEY: minio
+      MINIO_SECRET_KEY: minio123
+    command: server /data/minio
+
+  # Videos microservice
+  video-service:
+    build: ../blue-stream-video
+    ports:
+      - "5001:3000"
+    env_file:
+      - ./env/node.env
+      - ./env/mongo.env
+      - ./env/rabbitmq.env
+    restart: always
+    depends_on:
+      - mongo
+      - rabbit
+    links:
+      - mongo
+      - rabbit
+
+  # Transcoder Service
+  transcoder-service:
+    build: ../blue-stream-transcoder
+    env_file: 
+      - ./env/rabbitmq.env
+      - ./env/s3.env
+    restart: always
+    depends_on:
+      - rabbit
+    links:
+      - rabbit
+
+  # Uploader Service
+  uploader-service:
+    build: ../blue-stream-uploader
+    ports:
+      - "5002:3000"
+    env_file:
+      - ./env/node.env
+      - ./env/rabbitmq.env
+      - ./env/s3.env
+    environment:
+      MAX_FILE_SIZE: 20971520000
+    restart: always
+    depends_on:
+      - rabbit
+    links:
+      - rabbit
+
+
+volumes:
+  mongo-data-volume:
+  rabbit-volume:
+  minio-data:
