@@ -19,7 +19,7 @@ services:
         - "4000:5672"
         - "4001:15672"
      healthcheck: 
-        test: ["CMD", "curl", "-f", "http://localhost:15672"]
+        test: ["CMD", "curl", "-f", "http://rabbit:15672"]
         interval: 30s
         timeout: 10s
         retries: 5
@@ -81,6 +81,16 @@ services:
     links:
       - rabbit
 
+  # Client
+  angular-client:
+    build: ../blue-stream-client
+    ports:
+      - "80:80"
+    restart: always
+    depends_on:
+      - uploader-service
+      - video-service
+      - transcoder-service
 
 volumes:
   mongo-data-volume:
