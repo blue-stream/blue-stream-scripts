@@ -81,6 +81,57 @@ services:
     links:
       - rabbit
 
+  # Comment Service
+  comment-service:
+    build: ../blue-stream-comments
+    ports:
+      - "5003:3000"
+    env_file:
+      - ./env/node.env
+      - ./env/rabbitmq.env
+      - ./env/mongo.env
+    restart: always
+    depends_on:
+      - rabbit
+      - mongo
+    links:
+      - rabbit
+      - mongo
+
+  # Reaction Service
+  reaction-service:
+    build: ../blue-stream-reactions
+    ports:
+      - "5004:3000"
+    env_file:
+      - ./env/node.env
+      - ./env/rabbitmq.env
+      - ./env/mongo.env
+    restart: always
+    depends_on:
+      - rabbit
+      - mongo
+    links:
+      - rabbit
+      - mongo
+
+  # Streamer Service
+  streamer-service:
+    build: ../blue-stream-streamer
+    ports:
+      - "5005:3000"
+    env_file:
+      - ./env/node.env
+      - ./env/rabbitmq.env
+      - ./env/s3.env
+    restart: always
+    depends_on:
+      - rabbit
+      - minio
+    links:
+      - rabbit
+      - minio
+
   # Client
   angular-client:
     build: ../blue-stream-client
