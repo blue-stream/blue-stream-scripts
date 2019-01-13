@@ -115,6 +115,23 @@ services:
       - rabbit
       - mongo
 
+  # Channel Service
+  channel-service:
+    build: ../blue-stream-channel
+    ports:
+      - "5006:3000"
+    env_file:
+      - ./env/node.env
+      - ./env/rabbitmq.env
+      - ./env/mongo.env
+    restart: always
+    depends_on:
+      - rabbit
+      - mongo
+    links:
+      - rabbit
+      - mongo  
+
   # Streamer Service
   streamer-service:
     build: ../blue-stream-streamer
@@ -142,6 +159,7 @@ services:
       - uploader-service
       - video-service
       - transcoder-service
+
 
 volumes:
   mongo-data-volume:
