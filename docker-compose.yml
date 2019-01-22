@@ -40,6 +40,7 @@ services:
     build: ../blue-stream-video
     ports:
       - "5001:3000"
+      - "6001:6000"
     env_file:
       - ./env/node.env
       - ./env/mongo.env
@@ -86,6 +87,7 @@ services:
     build: ../blue-stream-comments
     ports:
       - "5003:3000"
+      - "6003:6000"
     env_file:
       - ./env/node.env
       - ./env/rabbitmq.env
@@ -103,6 +105,7 @@ services:
     build: ../blue-stream-reactions
     ports:
       - "5004:3000"
+      - "6004:6000"
     env_file:
       - ./env/node.env
       - ./env/rabbitmq.env
@@ -120,6 +123,7 @@ services:
     build: ../blue-stream-channel
     ports:
       - "5006:3000"
+      - "6006:6000"
     env_file:
       - ./env/node.env
       - ./env/rabbitmq.env
@@ -131,6 +135,24 @@ services:
     links:
       - rabbit
       - mongo  
+
+  # User Service
+  user-service:
+    build: ../blue-stream-users
+    ports:
+      - "5007:3000"
+      - "6007:6000"
+    env_file:
+      - ./env/node.env
+      - ./env/mongo.env
+      - ./env/rabbitmq.env
+    restart: always
+    depends_on:
+      - rabbit
+      - mongo
+    links:
+      - rabbit
+      - mongo
 
   # Streamer Service
   streamer-service:
@@ -159,6 +181,7 @@ services:
       - uploader-service
       - video-service
       - transcoder-service
+      - user-service
 
 
 volumes:
