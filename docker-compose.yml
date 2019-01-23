@@ -1,7 +1,7 @@
 version: '3'
 services:
 
-  # Mongodb
+  # Mongodb - Database
   mongo:
     image: mongo:latest
     ports:
@@ -9,7 +9,7 @@ services:
     volumes:
       - mongo-data-volume:/data/db
 
-  # RabbitMQ
+  # RabbitMQ - Message queues
   rabbit:
      image: rabbitmq:management
      hostname: rabbit
@@ -24,6 +24,7 @@ services:
         timeout: 10s
         retries: 5
 
+  # Minio - Object storage
   minio:
     image: minio/minio
     volumes:
@@ -38,9 +39,6 @@ services:
   # Videos microservice
   video-service:
     build: ../blue-stream-video
-    ports:
-      - "5001:3000"
-      - "6001:6000"
     env_file:
       - ./env/node.env
       - ./env/mongo.env
@@ -85,9 +83,6 @@ services:
   # Comment Service
   comment-service:
     build: ../blue-stream-comments
-    ports:
-      - "5003:3000"
-      - "6003:6000"
     env_file:
       - ./env/node.env
       - ./env/rabbitmq.env
@@ -103,9 +98,6 @@ services:
   # Reaction Service
   reaction-service:
     build: ../blue-stream-reactions
-    ports:
-      - "5004:3000"
-      - "6004:6000"
     env_file:
       - ./env/node.env
       - ./env/rabbitmq.env
@@ -121,9 +113,6 @@ services:
   # Channel Service
   channel-service:
     build: ../blue-stream-channel
-    ports:
-      - "5006:3000"
-      - "6006:6000"
     env_file:
       - ./env/node.env
       - ./env/rabbitmq.env
@@ -139,9 +128,6 @@ services:
   # User Service
   user-service:
     build: ../blue-stream-users
-    ports:
-      - "5007:3000"
-      - "6007:6000"
     env_file:
       - ./env/node.env
       - ./env/mongo.env
@@ -171,6 +157,69 @@ services:
       - rabbit
       - minio
 
+  # Video Compositor Service
+  video-compositor-service:
+    build: ../blue-stream-video-compositor
+    ports:
+      - "7001:3000"
+    env_file:
+      - ./env/node.env
+      - ./env/rabbitmq.env
+      - ./env/compositor.env
+    restart: always
+    depends_on:
+      - rabbit
+      - user-service
+      - video-service
+      - channel-service
+    links:
+      - rabbit
+      - user-service
+      - video-service
+      - channel-service
+
+  # Comment Compositor Service
+  comment-compositor-service:
+    build: ../blue-stream-comment-compositor
+    ports:
+      - "7002:3000"
+    env_file:
+      - ./env/node.env
+      - ./env/rabbitmq.env
+      - ./env/compositor.env
+    restart: always
+    depends_on:
+      - rabbit
+      - user-service
+      - comment-service
+      - reaction-service
+    links:
+      - rabbit
+      - user-service
+      - comment-service
+      - reaction-service
+
+  # Reaction Compositor Service
+  reaction-compositor-service:
+    build: ../blue-stream-reaction-compositor
+    ports:
+      - "7003:3000"
+    env_file:
+      - ./env/node.env
+      - ./env/rabbitmq.env
+      - ./env/compositor.env
+    restart: always
+    depends_on:
+      - rabbit
+      - comment-service
+      - video-service
+      - reaction-service
+    links:
+      - rabbit
+      - comment-service
+      - video-service
+      - reaction-service
+
   # Client
   angular-client:
     build: ../blue-stream-client
@@ -178,10 +227,12 @@ services:
       - "80:80"
     restart: always
     depends_on:
+      - streamer-service
       - uploader-service
-      - video-service
       - transcoder-service
-      - user-service
+      - video-compositor-service
+      - comment-compositor-service
+      - reaction-compositor-service
 
 
 volumes:
