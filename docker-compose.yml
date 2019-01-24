@@ -36,6 +36,18 @@ services:
       MINIO_SECRET_KEY: minio123
     command: server /data/minio
 
+  # SAML Test IDP
+  saml-idp:
+    image: kristophjunge/test-saml-idp
+    ports:
+      - "8080:8080"
+      - "8443:8443"
+    env_file:
+      - ./env/authenticator.env
+    volumes:
+      - ./authentication/config/users.php:/var/www/simplesamlphp/config/authsources.php
+    restart: always
+
   # Videos microservice
   video-service:
     build: ../blue-stream-video
