@@ -157,6 +157,15 @@ services:
       - rabbit
       - minio
 
+  # Classification mocks service
+  classification-mocks-service:
+    build: ../blue-stream-classification-mocks
+    ports:
+      - "5006:3000"
+    restart: always
+    env_file:
+      - ./env/node.env
+
   # Video Compositor Service
   video-compositor-service:
     build: ../blue-stream-video-compositor
