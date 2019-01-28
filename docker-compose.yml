@@ -241,6 +241,22 @@ services:
       - video-service
       - reaction-service
 
+  # Authentication Service
+  authentication-service:
+    build: ../blue-stream-authenticator
+    ports: 
+      - '5010:3000'
+    env_file:
+      - ./env/node.env
+      - ./env/authenticator.env
+    restart: always
+    depends_on:
+      - saml-idp
+      - user-service
+    links:
+      - saml-idp
+      - user-service
+
   # Client
   angular-client:
     build: ../blue-stream-client
@@ -254,7 +270,6 @@ services:
       - video-compositor-service
       - comment-compositor-service
       - reaction-compositor-service
-
 
 volumes:
   mongo-data-volume:
