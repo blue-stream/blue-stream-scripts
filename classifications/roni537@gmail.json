@@ -1,0 +1,836 @@
+{
+    "classification": 3,
+    "classificationsAllow": [
+        {
+            "classificationId": 0,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 1,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 2,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 3,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 4,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 5,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 6,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 7,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 8,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 9,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 10,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 11,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 12,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 13,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 14,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 15,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 16,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 17,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 18,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 19,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 20,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 21,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 22,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 23,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 24,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 25,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 26,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 27,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 28,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 29,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 30,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 31,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 32,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 33,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 34,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 35,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 36,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 37,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 38,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 39,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 40,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 41,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 42,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 43,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 44,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 45,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 46,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 47,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 48,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 49,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 50,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 51,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 52,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 53,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 54,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 55,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 56,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 57,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 58,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 59,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 60,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 61,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 62,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 63,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 64,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 65,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 66,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 67,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 68,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 69,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 70,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 71,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 72,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 73,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 74,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 75,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 76,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 77,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 78,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 79,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 80,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 81,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 82,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 83,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 84,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 85,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 86,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 87,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 88,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 89,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 90,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 91,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 92,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 93,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 94,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 95,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 96,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 97,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 98,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 99,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 100,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 101,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 102,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 103,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 104,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 105,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 106,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 107,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 108,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 109,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 110,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 111,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 112,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 113,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 114,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 115,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 116,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 117,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 118,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 119,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 120,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 121,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 122,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 123,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 124,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 125,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 126,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 127,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 128,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 129,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 130,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 131,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 132,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 133,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 134,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 135,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 136,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 137,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 138,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 139,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 140,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 141,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 142,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 143,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 144,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 145,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 146,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 147,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 148,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 149,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 150,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 151,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 152,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 153,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 154,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 155,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 156,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 157,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 158,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 159,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 160,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 161,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 162,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 163,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 164,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 165,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 166,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 167,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 168,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 169,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 170,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 171,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 172,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 173,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 174,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 175,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 176,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 177,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 178,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 179,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 180,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 181,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 182,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 183,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 184,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 185,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 186,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 187,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 188,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 189,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 190,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 191,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 192,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 193,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 194,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 195,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 196,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 197,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 198,
+            "classificationLayer": 2
+        },
+        {
+            "classificationId": 199,
+            "classificationLayer": 2
+        }
+    ],
+    "ppAllow": [
+        {
+            "ppId": 5,
+            "ppType": "a"
+        },
+        {
+            "ppId": 66,
+            "ppType": "b"
+        },
+        {
+            "ppId": 35,
+            "ppType": "b"
+        },
+        {
+            "ppId": 15,
+            "ppType": "a"
+        },
+        {
+            "ppId": 10,
+            "ppType": "b"
+        },
+        {
+            "ppId": 73,
+            "ppType": "a"
+        },
+        {
+            "ppId": 24,
+            "ppType": "a"
+        }
+    ],
+    "displayName": "איזה/כיף/הולך להיות/היום"
+}

@@ -144,6 +144,7 @@ services:
       - ./env/node.env
       - ./env/mongo.env
       - ./env/rabbitmq.env
+      - ./env/classification.env
     restart: always
     depends_on:
       - rabbit
@@ -172,9 +173,9 @@ services:
   # Classification mocks service
   classification-mocks-service:
     build: ../blue-stream-classification-mocks
-    ports:
-      - "5006:3000"
     restart: always
+    volumes:
+      - ./classifications/:/home/blue-stream/app/users/
     env_file:
       - ./env/node.env
 
