@@ -15,7 +15,7 @@ $config = array(
             'mail' => 'roni537@gmail.com'
         ),
         'assa:yuval' => array(
-            'id' => array('assa.yuval107'),
+            'id' => array('assa@yuval107'),
             'givenName' => 'Yuval',
             'surName' => 'Assa',
             'mail' => 'assa.yuval107.com'
