@@ -18,7 +18,7 @@ $config = array(
             'id' => array('assa@yuval107'),
             'givenName' => 'Yuval',
             'surName' => 'Assa',
-            'mail' => 'assa.yuval107.com'
+            'mail' => 'assa@yuval107.com'
         ),
         'vagman:almog' => array(
             'id' => array('almogvc@gmail'),
