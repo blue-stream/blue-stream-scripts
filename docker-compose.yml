@@ -145,6 +145,7 @@ services:
       - ./env/mongo.env
       - ./env/rabbitmq.env
       - ./env/classification.env
+      - ./env/rpc.env
     restart: always
     depends_on:
       - rabbit
