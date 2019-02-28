@@ -16,3 +16,4 @@ git clone https://github.com/blue-stream/blue-stream-reaction-compositor
 git clone https://github.com/blue-stream/blue-stream-authenticator
 git clone https://github.com/blue-stream/blue-stream-video-compositor
 git clone https://github.com/blue-stream/blue-stream-client
+git clone https://github.com/blue-stream/classification-updater-cron.git
