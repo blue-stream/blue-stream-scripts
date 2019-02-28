@@ -273,6 +273,19 @@ services:
       - comment-compositor-service
       - reaction-compositor-service
 
+  # Classification updater cron
+  classification-updater-cron:
+    build: ../classification-updater-cron
+    restart: always
+    env_file:
+      - ./env/classification.env
+      - ./env/cron.env
+      - ./env/mongo.env
+    depends_on: 
+      - mongo
+      - video-service
+      - classification-mocks-service
+
 volumes:
   mongo-data-volume:
   rabbit-volume:
