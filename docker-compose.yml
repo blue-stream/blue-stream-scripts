@@ -55,6 +55,7 @@ services:
       - ./env/node.env
       - ./env/mongo.env
       - ./env/rabbitmq.env
+      - ./env/classification.env
     restart: always
     depends_on:
       - mongo
