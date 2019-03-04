@@ -263,8 +263,6 @@ services:
   # Client
   angular-client:
     build: ../blue-stream-client
-    ports:
-      - "80:80"
     restart: always
     depends_on:
       - streamer-service
@@ -286,6 +284,14 @@ services:
       - mongo
       - video-service
       - classification-mocks-service
+
+  # Nginx
+  nginx:
+    image: nginx:latest
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+    ports:
+      - "80:80"
 
 volumes:
   mongo-data-volume:
