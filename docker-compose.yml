@@ -289,6 +289,7 @@ services:
   nginx:
     image: nginx:latest
     volumes:
+      - ./../blue-stream-client/dist/blue-stream:/usr/share/nginx/html
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf
     ports:
       - "80:80"
