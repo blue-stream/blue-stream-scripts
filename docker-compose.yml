@@ -70,6 +70,7 @@ services:
     env_file: 
       - ./env/rabbitmq.env
       - ./env/s3.env
+      - ./env/node.env
     restart: always
     depends_on:
       - rabbit
@@ -260,17 +261,17 @@ services:
       - saml-idp
       - user-service
 
-  # Client
-  angular-client:
-    build: ../blue-stream-client
-    restart: always
-    depends_on:
-      - streamer-service
-      - uploader-service
-      - transcoder-service
-      - video-compositor-service
-      - comment-compositor-service
-      - reaction-compositor-service
+  # # Client
+  # angular-client:
+  #   build: ../blue-stream-client
+  #   restart: always
+  #   depends_on:
+  #     - streamer-service
+  #     - uploader-service
+  #     - transcoder-service
+  #     - video-compositor-service
+  #     - comment-compositor-service
+  #     - reaction-compositor-service
 
   # Classification updater cron
   classification-updater-cron:
@@ -293,7 +294,36 @@ services:
     ports:
       - "80:80"
     depends_on:
-      - angular-client
+        # - angular-client
+        - streamer-service
+        - uploader-service
+        - transcoder-service
+        - video-compositor-service
+        - comment-compositor-service
+        - reaction-compositor-service
+
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:6.6.2
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    networks:
+      - docker_elk
+  kibana:
+    image: docker.elastic.co/kibana/kibana:6.6.2
+    container_name: kibana
+    environment:
+      - "ELASTICSEARCH_URL=http://elasticsearch:9200"
+    ports:
+      - "5601:5601"
+    links:
+      - elasticsearch
+    networks:
+      - docker_elk
+
+networks:
+  docker_elk:
+    driver: bridge
 
 volumes:
   mongo-data-volume:
