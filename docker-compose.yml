@@ -295,7 +295,40 @@ services:
     depends_on:
       - angular-client
 
+  # Elastic Search
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:6.3.2
+    ports: 
+      - "9200:9200"
+    environment:
+      - 'ES_JAVA_OPTS=-Xms512m -Xmx512m'
+      - 'discovery.type=single-node'
+      - 'network.host=0.0.0.0'
+    volumes:
+      - esdata1:/usr/share/elasticsearch/data
+      - mongo-data-volume:/data/db
+
+  # Kibana
+  kibana:
+    image: docker.elastic.co/kibana/kibana:6.3.2
+    ports: 
+      - "5601:5601"
+    depends_on: 
+        - elasticsearch
+
+  # APM
+  apm:
+    image: docker.elastic.co/apm/apm-server:6.3.2
+    environment:
+      - 'ES_HOSTS=http://elasticsearch:9200'
+    ports:
+      - "8200:8200"
+    depends_on: 
+        - elasticsearch
+        - kibana
+
 volumes:
+  esdata1:
   mongo-data-volume:
   rabbit-volume:
   minio-data:
