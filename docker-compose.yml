@@ -281,6 +281,7 @@ services:
       - ./env/cron.env
       - ./env/mongo.env
     depends_on: 
+      - elasticsearch
       - mongo
       - video-service
       - classification-mocks-service
