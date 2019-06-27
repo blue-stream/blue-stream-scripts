@@ -260,17 +260,18 @@ services:
       - saml-idp
       - user-service
 
-  # Client
-  angular-client:
-    build: ../blue-stream-client
-    restart: always
-    depends_on:
-      - streamer-service
-      - uploader-service
-      - transcoder-service
-      - video-compositor-service
-      - comment-compositor-service
-      - reaction-compositor-service
+  # Uncomment when need to use angular-client container
+  # # Client
+  # angular-client:
+  #   build: ../blue-stream-client
+  #   restart: always
+  #   depends_on:
+  #     - streamer-service
+  #     - uploader-service
+  #     - transcoder-service
+  #     - video-compositor-service
+  #     - comment-compositor-service
+  #     - reaction-compositor-service
 
   # Classification updater cron
   classification-updater-cron:
@@ -293,8 +294,9 @@ services:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf
     ports:
       - "80:80"
-    depends_on:
-      - angular-client
+    # Uncomment when need to use angular-client container
+    # depends_on:
+    #   - angular-client
 
   # Elastic Search
   elasticsearch:
